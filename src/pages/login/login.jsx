@@ -2,14 +2,32 @@ import {Box, Card, CardActions, CardContent, Grid} from "@mui/material";
 import * as React from "react";
 import {useState} from "react";
 import Button from "@mui/material/Button";
-import CustomTextField from "../text-field/text-field";
+import CustomTextField from "../../components/text-field/text-field";
 
 function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    function login() {
-        console.log("submit")
+    const login = async event => {
+        event.preventDefault();
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        var raw = JSON.stringify({
+            "email": email,
+            "password": password
+        });
+
+        const requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+        };
+
+        const response = await fetch("http://localhost:8080/auth/signin", requestOptions);
+        const json = await response.json();
+        window.sessionStorage.setItem("token", json["object"]["token"]["token"])
     }
 
     return (

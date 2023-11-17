@@ -3,6 +3,7 @@ import {alpha, styled} from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 
 const StyledTextField = styled('div')(({theme}) => ({
+    marginBottom: "1em",
     borderRadius: theme.shape.borderRadius,
     backgroundColor: alpha(theme.palette.common.white, 0.15),
     '&:hover': {
@@ -27,6 +28,7 @@ function CustomTextField(props) {
                 onChange={props.onChange}
             >
                 <StyledInputBase
+                    defaultValue={props.value}
                     type={props.type}
                     required={props.required}
                     placeholder={props.label}

@@ -1,18 +1,15 @@
 import Button from '@mui/material/Button';
-import {withStyles} from "@mui/styles";
+import {styled} from "@mui/material/styles";
 
 
 function TextIconButton(props) {
-
-    const StyledButton = withStyles({
-        root: {
-            fontWeight: 'bold',
-            color: '#fff!important',
-            '&:hover': {
-                borderBottom: props.borderBottom
-            },
-        }
-    })(Button);
+    const StyledButton = styled(Button)(({theme}) => ({
+        fontWeight: 'bold',
+        color: '#fff!important',
+        '&:hover': {
+            borderBottom: props.borderBottom
+        },
+    }));
 
     return (
         <>

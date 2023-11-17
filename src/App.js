@@ -1,8 +1,8 @@
 import './App.css';
-import Header from "./components/header/header";
+import Header from "./pages/header/header";
 import {themeOptions} from "./index";
-import Footer from "./components/footer/footer";
-import Body from "./components/body/body";
+import Footer from "./pages/footer/footer";
+import Body from "./pages/body/body";
 
 function App() {
     // const [, setClientStomp] = useState(null)

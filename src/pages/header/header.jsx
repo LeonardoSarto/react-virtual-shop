@@ -9,9 +9,9 @@ import MenuItem from '@mui/material/MenuItem';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import {themeOptions} from "../../index";
-import TextIconButton from "../text-icon-button/text-icon-button";
+import TextIconButton from "../../components/text-icon-button/text-icon-button";
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import CustomIconButtonDropdown from "../icon/custom-icon-button-dropdown";
+import CustomIconButtonDropdown from "../../components/icon/custom-icon-button-dropdown";
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import {
     CardGiftcard,

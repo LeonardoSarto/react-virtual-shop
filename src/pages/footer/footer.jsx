@@ -1,5 +1,5 @@
 import {Divider, Grid, Paper, Typography} from "@mui/material";
-import TextIconButton from "../text-icon-button/text-icon-button";
+import TextIconButton from "../../components/text-icon-button/text-icon-button";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YoutubeIcon from '@mui/icons-material/YouTube';

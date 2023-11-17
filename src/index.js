@@ -2,15 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Login from "./components/login/login";
+import Login from "./pages/login/login";
 import {createTheme, ThemeProvider} from '@mui/material/styles';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import App from "./App";
-import AdminDashboard from "./components/admin-dashboard/admin-dashboard";
-import GameDetail from "./components/game-detail/game-detail";
-import Header from "./components/header/header";
-import Footer from "./components/footer/footer";
-import Body from "./components/body/body";
+import AdminDashboard from "./pages/admin-dashboard/admin-dashboard";
+import GameDetail from "./pages/game-detail/game-detail";
+import Header from "./pages/header/header";
+import Footer from "./pages/footer/footer";
+import Body from "./pages/body/body";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -37,7 +36,6 @@ export const themeOptions = createTheme({
 
 root.render(
     <ThemeProvider theme={themeOptions}>
-        <Header/>
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Body/>}></Route>
@@ -46,8 +44,6 @@ root.render(
                 <Route path="/game/*" element={<GameDetail/>}></Route>
             </Routes>
         </BrowserRouter>
-        <Footer/>
-
     </ThemeProvider>
 );
 

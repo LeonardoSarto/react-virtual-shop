@@ -1,4 +1,5 @@
 import React, {useEffect} from "react";
+import {Typography} from "@mui/material";
 
 export default function GameDetail() {
     const [gameDetails, setGameDetails] = React.useState();
@@ -14,9 +15,14 @@ export default function GameDetail() {
     useEffect(() => {
         getGames();
     }, []);
-    return(
+    return (
         <>
-            <img src={gameDetails?.image} alt="game-image"/>
+            <div style={{display: "flex"}}>
+                <img src={gameDetails?.image} alt="game"/>
+                <Typography variant="h3" color="white" sx={{fontWeight: 'bold'}}>
+                    {gameDetails?.name}
+                </Typography>
+            </div>
         </>
     );
 }
